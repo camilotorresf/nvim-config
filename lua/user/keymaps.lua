@@ -60,6 +60,8 @@ keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+-- To Do
+keymap("n", "<leader>tt", "<cmd>lua require('telescope.builtin').grep_string({search=\"TODO camilo\"})<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
@@ -87,3 +89,4 @@ keymap("n", "<leader>h2", "<cmd>lua require'harpoon.ui'.nav_file(2)<cr>", opts)
 keymap("n", "<leader>h3", "<cmd>lua require'harpoon.ui'.nav_file(3)<cr>", opts)
 keymap("n", "<leader>h4", "<cmd>lua require'harpoon.ui'.nav_file(4)<cr>", opts)
 keymap("n", "<leader>h5", "<cmd>lua require'harpoon.ui'.nav_file(5)<cr>", opts)
+
