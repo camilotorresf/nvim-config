@@ -78,3 +78,12 @@ keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
 keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
+-- Harpoon
+keymap("n", "<leader>ha", "<cmd>lua require'harpoon.mark'.add_file()<cr>", opts)
+keymap("n", "<leader>hh", "<cmd>lua require'harpoon.ui'.toggle_quick_menu()<cr>", opts)
+keymap("n", "<leader>h1", "<cmd>lua require'harpoon.ui'.nav_file(1)<cr>", opts)
+keymap("n", "<leader>h2", "<cmd>lua require'harpoon.ui'.nav_file(2)<cr>", opts)
+keymap("n", "<leader>h3", "<cmd>lua require'harpoon.ui'.nav_file(3)<cr>", opts)
+keymap("n", "<leader>h4", "<cmd>lua require'harpoon.ui'.nav_file(4)<cr>", opts)
+keymap("n", "<leader>h5", "<cmd>lua require'harpoon.ui'.nav_file(5)<cr>", opts)
