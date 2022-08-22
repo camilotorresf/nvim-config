@@ -15,7 +15,17 @@ M.snippets = {
     i(1),
     t("') // TODO camilo: remove this"),
     i(0),
-  })
+  }),
+  s(
+    {
+      trig = "todo",
+      name = "ts-todo",
+      description = "Adds a TODO comment for Camilo",
+    }, {
+      t("// TODO camilo: "),
+      i(0),
+    }
+  ),
 }
 
 return M
