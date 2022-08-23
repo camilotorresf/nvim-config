@@ -17,10 +17,10 @@ vim.g.mapleader = " "
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+-- keymap("n", "<C-h>", "<C-w>h", opts)
+-- keymap("n", "<C-j>", "<C-w>j", opts)
+-- keymap("n", "<C-k>", "<C-w>k", opts)
+-- keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -31,15 +31,17 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<C-l>", ":bnext<CR>", opts)
+keymap("n", "<C-h>", ":bprevious<CR>", opts)
 
 -- Clear highlights
-keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
+-- keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
 -- Close buffers
 keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
 -- Better paste
-keymap("v", "p", '"_dP', opts)
+-- keymap("v", "p", '"_dP', opts)
 
 -- Insert --
 -- Press jk fast to enter
@@ -60,6 +62,7 @@ keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<leader>fh", ":Telescope grep_string<CR>", opts)
 -- To Do
 keymap("n", "<leader>tt", "<cmd>lua require('telescope.builtin').grep_string({search=\"TODO camilo\"})<CR>", opts)
 
@@ -89,4 +92,5 @@ keymap("n", "<leader>h2", "<cmd>lua require'harpoon.ui'.nav_file(2)<cr>", opts)
 keymap("n", "<leader>h3", "<cmd>lua require'harpoon.ui'.nav_file(3)<cr>", opts)
 keymap("n", "<leader>h4", "<cmd>lua require'harpoon.ui'.nav_file(4)<cr>", opts)
 keymap("n", "<leader>h5", "<cmd>lua require'harpoon.ui'.nav_file(5)<cr>", opts)
+keymap("n", "<leader>h6", "<cmd>lua require'harpoon.ui'.nav_file(6)<cr>", opts)
 
