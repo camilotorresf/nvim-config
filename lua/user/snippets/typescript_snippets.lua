@@ -11,10 +11,11 @@ M.snippets = {
     name = "ts-console-log",
     description = "TypeScript log trace for debugging",
   }, {
-    t("console.log('"),
+    t("console.log('** "),
     i(1),
-    t("') // TODO camilo: remove this"),
+    t("'"),
     i(0),
+    t(") // TODO camilo: remove this"),
   }),
   s(
     {
