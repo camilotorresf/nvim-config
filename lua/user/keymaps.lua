@@ -94,3 +94,26 @@ keymap("n", "<leader>h4", "<cmd>lua require'harpoon.ui'.nav_file(4)<cr>", opts)
 keymap("n", "<leader>h5", "<cmd>lua require'harpoon.ui'.nav_file(5)<cr>", opts)
 keymap("n", "<leader>h6", "<cmd>lua require'harpoon.ui'.nav_file(6)<cr>", opts)
 
+-- luasnip
+local luasnip = require("luasnip")
+-- expand or jump
+keymap({ "i", "s" }, "<c-'>", function()
+  if luasnip.expand_or_jumpable() then
+    luasnip.expand_or_jump()
+  end
+end, { silent = true })
+-- previous
+keymap({ "i", "s" }, "<c-;>", function()
+  if luasnip.jumpable(-1) then
+    luasnip.jump(-1)
+  end
+end, { silent = true })
+-- select from list of option, useful for choice nodes
+keymap("i", "<c-l>", function()
+  if luasnip.choice_active() then
+    luasnip.change_choice(1)
+  end
+end)
+-- reload snippets
+keymap("n", "<leader>cs", "<cmd>source ~/.config/nvim/lua/user/snippets/init.lua<CR>")
+
