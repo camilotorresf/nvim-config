@@ -36,17 +36,52 @@ M.snippets = {
       t("', "),
       c(1,
         {
-          fmt("'{comment}'", { comment = i(1) }),
-          fmt("'{variable_name}', typeof({variable_name_type}), {variable_name_repeated}",
+          fmt("'{variable_name}', typeof({variable_name_type}), JSON.stringify({variable_name_repeated})",
             {
               variable_name = i(1),
               variable_name_type = rep(1),
               variable_name_repeated = rep(1),
             }
-          )
+          ),
+          fmt("'{comment}'", { comment = i(1) }),
         }
       ),
       t(") // TODO camilo: remove this"),
+    }
+  ),
+
+  s(
+    {
+      trig = "vlog",
+      name = "ts-console-log-variable",
+      description = "TypeScript log trace for a variable",
+    },
+    {
+      t("console.log(`"),
+      f(get_function_name),
+      t(":"),
+      f(get_line_number),
+      t(" ${JSON.stringify("),
+      i(1),
+      t(")}`)"),
+    }
+  ),
+
+  s(
+    {
+      trig = "tlog",
+      name = "ts-console-log-text",
+      description = "TypeScript log trace for free text",
+    },
+    {
+      t("console.log('"),
+      f(get_function_name),
+      t(":"),
+      f(get_line_number),
+      t(" "),
+      c(1, {t(""), t("Start "), t("End ")}),
+      i(2),
+      t("')"),
     }
   ),
 
