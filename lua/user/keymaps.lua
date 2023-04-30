@@ -38,7 +38,7 @@ keymap("n", "<C-h>", ":bprevious<CR>", opts)
 -- keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
 -- Close buffers
-keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<S-q>", "<cmd>bdelete!<CR>", opts)
 
 -- Better paste
 -- keymap("v", "p", '"_dP', opts)
@@ -117,4 +117,3 @@ keymap("i", "<c-l>", function()
 end)
 -- reload snippets
 keymap("n", "<leader>cs", "<cmd>source ~/.config/nvim/lua/user/snippets/init.lua<CR>")
-
